@@ -12,11 +12,11 @@
     <PackageVersion Include="Ardalis.GuardClauses" Version="5.0.0" />
     <PackageVersion Include="Ardalis.ListStartupServices" Version="1.1.4" />
     <PackageVersion Include="Ardalis.Result" Version="10.1.0" />
-    <PackageVersion Include="Ardalis.Specification" Version="9.2.0" />
+    <PackageVersion Include="Ardalis.Specification" Version="9.3.1" />
     <PackageVersion Include="Ardalis.Specification.EntityFrameworkCore" Version="9.2.0" />
     <PackageVersion Include="AspNetCore.Security.OAuth.Extensions" Version="1.0.0" />
-    <PackageVersion Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.4.0" />
-    <PackageVersion Include="Azure.Identity" Version="1.14.2" />
+    <PackageVersion Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.5.0" />
+    <PackageVersion Include="Azure.Identity" Version="1.19.0" />
     <PackageVersion Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageVersion Include="BlazorInputFile" Version="0.2.0" />
     <PackageVersion Include="Blazored.LocalStorage" Version="4.5.0" />
@@ -24,26 +24,26 @@
     <PackageVersion Include="FastEndpoints" Version="6.1.0" />
     <PackageVersion Include="FastEndpoints.Swagger" Version="6.1.0" />
     <PackageVersion Include="FluentValidation" Version="11.11.0" />
-    <PackageVersion Include="MediatR" Version="12.4.1" />
+    <PackageVersion Include="MediatR" Version="14.1.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.Authorization" Version="10.0.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="10.0.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0" PrivateAssets="all" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.5" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Stores" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.5" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="10.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.0-rc.1.25458.5" />
+    <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
     <PackageVersion Include="Microsoft.Web.LibraryManager.Build" Version="3.0.71" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0">
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
@@ -59,7 +59,7 @@
     <PackageVersion Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageVersion Include="System.IO.FileSystem.Primitives" Version="4.3.0" />
     <PackageVersion Include="System.Net.Http.Json" Version="10.0.0" />
-    <PackageVersion Include="System.Net.Primitives" Version="4.3.0" />
+    <PackageVersion Include="System.Net.Primitives" Version="4.3.1" />
     <PackageVersion Include="System.Security.Claims" Version="4.3.0" />
     <PackageVersion Include="System.Runtime.Handles" Version="4.3.0" />
     <PackageVersion Include="System.Runtime.InteropServices" Version="4.3.0" />
@@ -67,10 +67,10 @@
     <PackageVersion Include="System.Text.Encoding.Extensions" Version="4.3.0" />
     <PackageVersion Include="System.Text.Json" Version="10.0.0" />
     <PackageVersion Include="System.Threading" Version="4.3.0" />
-    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.12.0" />
+    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.17.0" />
     <!-- Aspire -->
     <PackageVersion Include="Aspire.Hosting.Seq" Version="13.0.1" />
-    <PackageVersion Include="Aspire.Seq" Version="13.0.1" />
+    <PackageVersion Include="Aspire.Seq" Version="13.2.0" />
     <PackageVersion Include="Aspire.Hosting.AppHost" Version="13.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.0.0" />
     <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.0.0" />
