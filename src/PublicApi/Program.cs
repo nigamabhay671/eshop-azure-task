@@ -26,6 +26,17 @@ builder.Configuration.AddConfigurationFile("appsettings.test.json");
 
 builder.Services.ConfigureLocalDatabaseContexts(builder.Configuration);
 
+
+
+//builder.Services.AddApplicationInsightsTelemetry();
+
+builder.Services.AddApplicationInsightsTelemetry(options =>
+{
+    options.ConnectionString = "InstrumentationKey=d8c5ed7d-f5af-47f3-9219-88593a427d67;IngestionEndpoint=https://centralindia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralindia.livediagnostics.monitor.azure.com/;ApplicationId=c86f5baa-fded-425e-9cbf-5df4993e4424";
+});
+
+builder.Logging.SetMinimumLevel(LogLevel.Information);
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
         .AddRoles<IdentityRole>()
         .AddEntityFrameworkStores<AppIdentityDbContext>()
@@ -52,12 +63,15 @@ builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddSwagger();
 
 builder.Services.AddMetronome();
-string seqUrl = builder.Configuration["Seq:ServerUrl"] ?? "http://localhost:5341";
+//string seqUrl = builder.Configuration["Seq:ServerUrl"] ?? "http://localhost:5341";
 
-builder.AddSeqEndpoint(connectionName: "seq", options =>
-{
-    options.ServerUrl = seqUrl;
-});
+//builder.AddSeqEndpoint(connectionName: "seq", options =>
+//{
+//    options.ServerUrl = seqUrl;
+//});
+
+
+
 
 var app = builder.Build();
 
@@ -65,11 +79,11 @@ app.Logger.LogInformation("PublicApi App created...");
 
 await app.SeedDatabaseAsync();
 
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseDeveloperExceptionPage();
-}
-
+//}
+app.MapGet("/", () => "API is running");
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
@@ -85,6 +99,7 @@ app.UseFastEndpoints();
 app.UseSwaggerGen();
 
 app.Logger.LogInformation("LAUNCHING PublicApi");
+app.Logger.LogInformation("LAUNCHING PublicApi211111111111111111111111111111111");
 app.Run();
 
 public partial class Program { }
