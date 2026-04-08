@@ -105,10 +105,29 @@ var app = builder.Build();
 
 app.Logger.LogInformation("App created...");
 
-// 🔥 FIX: SEED ONLY WHEN SQL IS USED
-if (!useInMemory)
+// 🔥 FIX: SEED DATABASE (IN-MEMORY AND SQL)
+using (var scope = app.Services.CreateScope())
 {
-    await app.SeedDatabaseAsync();
+    var services = scope.ServiceProvider;
+    var catalogContext = services.GetRequiredService<CatalogContext>();
+    var identityContext = services.GetRequiredService<AppIdentityDbContext>();
+    var logger = services.GetRequiredService<ILogger<Program>>();
+
+    if (useInMemory)
+    {
+        // Seed in-memory database
+        await CatalogContextSeed.SeedAsync(catalogContext, logger);
+
+        // Seed Identity database with users and roles
+        var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        await AppIdentityDbContextSeed.SeedAsync(identityContext, userManager, roleManager);
+    }
+    else
+    {
+        // Seed SQL database
+        await app.SeedDatabaseAsync();
+    }
 }
 
 var catalogBaseUrl = builder.Configuration.GetValue(typeof(string), "CatalogBaseUrl") as string;
