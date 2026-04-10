@@ -10,6 +10,8 @@ using Microsoft.eShopWeb.Web;
 using Microsoft.eShopWeb.Web.Areas.Identity.Helpers;
 using Microsoft.eShopWeb.Web.Configuration;
 using Microsoft.eShopWeb.Web.Extensions;
+using Microsoft.eShopWeb.Web.Interfaces;
+using Microsoft.eShopWeb.Web.Services;
 using NimblePros.Metronome;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,7 +35,7 @@ else
 {
     builder.Services.AddDatabaseContexts(builder.Environment, builder.Configuration);
 }
-
+builder.Services.AddHttpClient<IOrderItemsReserverService, OrderItemsReserverService>();
 builder.Services.AddCookieSettings();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()

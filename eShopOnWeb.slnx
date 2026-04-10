@@ -24,6 +24,7 @@
     <Project Path="tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj" />
     <Project Path="tests/UnitTests/UnitTests.csproj" />
   </Folder>
+  <Project Path="../OrderItemsReserver/OrderItemsReserver.csproj" />
   <Project Path="docker-compose.dcproj">
     <Build />
   </Project>

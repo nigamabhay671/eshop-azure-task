@@ -9,10 +9,19 @@
     <DockerServiceName>eshopwebmvc</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="deploy.ps1" />
+    <None Include="DEPLOYMENT_SUMMARY.md" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="GETTING_STARTED.md" />
+    <None Include="IMPLEMENTATION_COMPLETE.md" />
+    <None Include="IMPLEMENTATION_GUIDE.md" />
+    <None Include="INDEX.md" />
+    <None Include="PROJECT_COMPLETION_REPORT.md" />
+    <None Include="QUICKSTART.md" />
+    <None Include="VERIFICATION_CHECKLIST.md" />
   </ItemGroup>
 </Project>
